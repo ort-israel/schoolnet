@@ -1,0 +1,52 @@
+.report-passwordreset {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.report-passwordreset li {
+    display: inline-block;
+    max-width: 100px;
+    margin:0 0 25px 25px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.report-passwordreset li span {
+    color: #f60;
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.report-passwordreset li .btn,
+.path-report-passwordreset .btn{
+    background: #88b77b;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.2;
+    padding:10px;
+    text-shadow: none;
+}
+
+.report-passwordreset:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+/* reset password screen*/
+
+.path-report-passwordreset .resetpasswordtitle {
+    text-align: center;
+}
+
+.path-report-passwordreset #notice,
+.passwordwasresetsuccess{
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.2;
+}
