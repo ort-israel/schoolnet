@@ -1,0 +1,57 @@
+
+body{
+    border-top: none;
+    background-color: transparent;
+}
+
+#page{
+    padding-top: 0;
+}
+#page-header{
+    background-image: none;
+    border: none;
+    padding: 0;
+
+}
+.navbar {
+  display: none;
+}
+.que .info{
+    display: none;
+}
+#region-main {
+  padding-right: 0;
+  font-size: 16px;
+}
+.que .content{
+    margin: 0;
+}
+.que .formulation {
+  background-color: transparent;
+  border: none;
+
+}
+.answer label{
+    font-size: 16px;
+}
+.que.ddwtos .group1 {
+    background-color: #d4d4d4;
+    box-shadow: 1px 1px 1px 0 #cdcdcd;
+}
+
+.que.ddwtos .drop{
+    border: 1px inset #000000;
+    background-color: #f4f4f4;
+    box-shadow: none;
+}
+input[type="radio"], 
+input[type="checkbox"]{
+    margin-right: 0;
+    margin-left: 7px;
+}
+
+textarea, input[type="text"] {
+  font-size: 16px;
+  height: 30px;
+  line-height: 1.5;
+}

@@ -1,0 +1,665 @@
+/* Custom CSS
+-------------------------*/
+/*a.logo {
+    background: url([[setting:logo]]) no-repeat 0 0;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.dir-rtl a.logo {
+    background: url([[setting:logo]]) no-repeat 100% 0;
+    display: block;
+    float: right;
+}
+*/
+/* Custom CSS Settings
+-------------------------*/
+/*[[setting:customcss]]*/
+
+/* 2 definition below was wirtten to remove the blocks on sides
+-------------------------*/
+/*.block{
+  display: none;
+}
+li.section.hidden, .block.hidden, .block.invisible{
+    display: none !important;
+}
+/*-----General-----*/
+a:hover, a:focus{
+    text-decoration: none;
+}
+a:hover, a:focus{
+    color:#595959 ;
+}
+a{
+    color:#595959 ;
+}
+
+@font-face {
+    font-family: 'fbmodulary_bold';
+    src: url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/fbmodulary-bold-webfont.eot');
+    src: url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/fbmodulary-bold-webfont.eot?#iefix') format('embedded-opentype'), url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/fbmodulary-bold-webfont.woff') format('woff'),
+	url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/fbmodulary-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alef';
+    src: url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/Alef-Regular.eot');
+    src: url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/Alef-Regular.eot?#iefix') format('embedded-opentype'),
+    url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/Alef-Regular.woff') format('woff'),
+    url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/Alef-Regular.ttf') format('truetype'),
+    url('http://moodle29.ort.org.il/theme/cleanbrain/fonts/Alef-Regular.svg#alefregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+p{
+    font-family: 'Alef';
+}
+h2,h3{
+    font-family:'fbmodulary_bold' ;
+    letter-spacing: 1px;
+}
+#region-bs-main-and-post{
+    width: 760px;
+}
+.row-fluid{
+    width: 760px;
+}
+#page-mod-page-view #region-main{
+    width: 760px !important;
+}
+/*---HEADER----*/
+.navbar-fixed-top{
+    background:url([[pix:theme|header]]) repeat scroll center bottom;
+    color: #fff;
+    border-bottom: 10px solid #ee5a13;
+    padding: 0 calc(50% - 35em) 1rem;
+    height:192px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom{
+    position: inherit;
+}
+.logos {
+    position: relative;
+    z-index: 1;
+}
+.logo-site {
+    width: 220px;
+    height: 138px;
+    background:url([[pix:theme|sprite]]) no-repeat;
+    display: inline-block;
+    float: right;
+    margin: 26px 9px 0 0;
+}
+
+.logo-ort {
+    height: 128px;
+    width: 212px;
+    background:url([[pix:theme|sprite]]) no-repeat -35px -159px;
+    display: inline-block;
+    margin-top: 5px;
+    float: left;
+}
+#page-navbar{
+    float: left;
+}
+/*---CONTENT----*/
+
+body{
+    padding-top:0 !important;
+}
+.log{
+    background:url([[pix:theme|PatternBreadcrambs]]) repeat scroll rgba(0, 0, 0, 0);
+    padding: 0.5rem calc(50% - 35em) ;
+}
+.logininfo{
+    float: left;
+    padding-left: 9px;
+}
+#page{
+    max-width: 100%;
+}
+#page-content{
+    width: 960px;
+    margin: 0 auto;
+}
+.container-fluid{
+    padding: 0 !important;
+}
+.course-content{
+    float: right;
+}
+.row-fluid .span9{
+   float:right;
+}
+.row-fluid [class*="span"]{
+    min-height:0;
+}
+.navbar-inner{
+    background-color: #ffffff;
+    background-image: none;
+    box-shadow: none;
+}
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+    border-width:0;
+    box-shadow: none;
+    display: none;
+}
+.course-content{
+    width:760px;
+}
+.course-content ul.gridicons li .image_holder{
+    background-color:transparent !important;
+    border-style: none !important;
+}
+.course-content ul.gridicons li.currentselected{
+    background: transparent !important;
+    opacity: 1 !important;
+}
+.course-content ul.gridicons li:hover .image_holder{
+    box-shadow: none !important;
+}
+
+#gridiconcontainer{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#gridiconcontainer ul.gridicons li{
+    margin:0 !important;
+    padding: 0 !important;
+    position: relative;
+}
+.gridicons li #gridsection-5,.gridicons li #gridsection-4{
+    display: inline-block;
+    margin-top: -114px;
+}
+.course-content ul.gridicons img.new_activity{
+    display: none;
+}
+.course-content ul.gridicons li p.icon_content{
+    font-size:28px;
+    font-weight: bold;
+    overflow: visible;
+    white-space: normal;
+    margin-top: 244px;
+    color: #595959;
+    font-family: 'fbmodulary_bold';
+}
+.course-content ul.gridicons li #gridsection-1:before{
+    background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 0 rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 9px;
+    top: 50px;
+    width: 200px;
+}
+.course-content ul.gridicons li #gridsection-2:before{
+    background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 25% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: -3px;
+    top: 50px;
+    width: 200px;
+}
+.course-content ul.gridicons li #gridsection-3:before{
+    background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 50% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 1px;
+    top: 50px;
+    width: 200px;
+}
+.course-content ul.gridicons li #gridsection-4:before{
+    background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 75% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 4px;
+    top: -66px;
+    width: 200px;
+}
+
+.course-content ul.gridicons li #gridsection-5:before{
+    background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 100% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 9px;
+    top: -64px;
+    width: 200px;
+}
+.row-fluid #region-submain{
+    clear: both !important;
+    width: 1207px;
+    margin-right: -195px;
+    height: 235px;
+}
+#region-submain{
+    background:url([[pix:theme|backMida]]) repeat scroll 100% 100% rgba(0, 0, 0, 0);
+    border-top:12px solid #d3d3d3;
+}
+#region-submain section{
+    float: right;
+}
+.header,.cell{
+    background-color:transparent !important;
+    border: none;
+    padding-right: 0!important;
+}
+#block-region-side-pre{
+  width: 200px;
+  background:url([[pix:theme|petternSide]]) repeat ;
+  margin-left:-3px;
+}
+.block{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.block .content{
+    padding: 0;
+}
+.dir-rtl, .mdl-right, .dir-rtl .mdl-left{
+    text-align: right;
+}
+#block-region-side-post{
+    background: url("/moodle27/theme/image.php?theme=cleanbrain&component=theme&image=petternSide") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin-left: -3px;
+    width: 200px;
+}
+.block_glossary_random{
+    background:url([[pix:theme|PatternBreadcrambs]])repeat scroll 100% 0 rgba(0, 0, 0, 0);
+}
+.block_glossary_random #instance-202-header{
+    display: none;
+}
+.block_glossary_random h2{
+    display: block;
+    text-align: right;
+    color:#595959 ;
+    font-size: 26px;
+    background-color:#fbfbfb;
+    padding: 10px 15px 5px 17px !important;
+    line-height: 24px !important;
+}
+
+.block_glossary_random .no-overflow{
+    margin-right: 0;
+}
+.block_glossary_random .no-overflow p{
+    font-size: 18px;
+    padding:6px 15px 6px 6px;
+    width: 162px;
+    text-align: right;
+    background-color:#fbfbfb;
+    margin: 9px 0 0 0 ;
+}
+.block_glossary_random  .content .footer a{
+   font-family: 'Alef';
+}
+#page-content h2,.title_column_3{
+    font-size: 23px;
+    color:#595959;
+    display: inline-block;
+    padding-bottom: 9px;
+    text-align: right;
+    width: 168px;
+    border-bottom: 1px solid #f5ba9e;
+
+}
+.column_3 #personalteachermenu{
+    margin-right: 8px;
+}
+#mypersonalmenu li,#personalteachermenu li{
+    text-align: right;
+    margin-right: 22px;
+    line-height: 25px;
+}
+.course-content ul.section{
+margin-right:0;
+}
+
+.dir-rtl .section .activity .mod-indent-outer{
+padding-right:0;
+}
+
+/*-----FOOTER-----*/
+#page-footer{
+    border-top:none;
+    margin-top: 0;
+}
+#page-footer{
+    background:url([[pix:theme|footer]]) repeat center;
+    background-repeat:repeat-x;
+    border-top:10px solid #ee5a13;
+    padding:0.4rem calc(50% - 35em) 1% ;
+    text-align: center;
+    height: 38px;
+}
+.footer_details{
+    list-style: none;
+    margin: 60px 0 0 0;
+}
+.footer_details li{
+    float: right;
+    padding-left: 5px;
+}
+
+/*-----INNER-PAGE-----*/
+#page-course-view-grid .row-fluid{
+    background: #ffffff;
+}
+
+#add, #remove, .centerpara, .mdl-align{
+    text-align: right;
+}
+.single-section h3.sectionname{
+text-align:right;
+}
+#gtopics{
+    float: right;
+    width: 760px;
+}
+
+.mdl-align{
+    font-size:28px !important;
+    margin:0 120px 26px 0;
+    color: #595959;
+    font-family: 'fbmodulary_bold' !important;
+    letter-spacing: 1px;
+}
+.single-section #gtopics .section{
+    margin:0 0 0 15px;
+}
+.navigationtitle{
+    width: 760px;
+}
+.course-content .single-section .section-navigation{
+    padding-right: 0;
+}
+.no-overflow{
+    overflow: visible;
+}
+.no-overflow span{
+    text-decoration: none !important;
+}
+.no-overflow strong{
+    color: #595959;
+    font-size:28px;
+}
+.no-overflow p{
+    margin:0;
+    font-size: 18px;
+    color:#595959 !important;
+}
+.no-overflow p span{
+    font-family: 'alef' !important;
+	 color:#595959 !important;
+}
+.summary .no-overflow p img{
+    margin-right: -39px;
+}
+#gtopics .section .content{
+ margin-left: 40px;
+}
+.no-overflow p img{
+    float: right !important;
+    margin-left: 10px !important;
+}
+.no-overflow p strong{
+    font-weight: normal;
+    font-size: 18px !important;
+}
+.dir-rtl .section .activity .mod-indent-outer{
+margin-bottom:20px;
+}
+.dir-rtl .section .activity .availabilityinfo, .dir-rtl .section .activity .contentafterlink{
+  font-family: 'alef' !important;
+  margin:0 60px 0 0;
+  color:#595959 !important;
+}
+.instancename{
+font-family: 'alef' !important;
+}
+ #gtopics .content{
+      margin-right:0;
+  }
+ #block-region-side-post{
+     margin-left: 116px;
+ }
+ .instancename{
+     font-size: 18px;
+     color:#595959 ;
+ }
+#sectionmenu{
+    display: none;
+}
+.section .activity.modtype_label.label{
+    padding: 2px;
+}
+.section-navigation .mdl-left,.section-navigation .mdl-right{
+    display: none;
+}
+.single-section .mod-indent{
+    font-family: 'alef';
+}
+#page-mod-page-view  #region-main h2{
+width:auto;
+}
+.modified{
+margin-right:86px;
+}
+#section-3 .content .img-text{/*in  this section the content is diffrent from the other*/
+    margin-top: 68px;
+}
+#gtopics #section-1 .img-text{
+    margin-top: 38px;
+}
+/*-------ASIDE--------*/
+#mypersonalmenu li a, #personalteachermenu li a , .navbar li a{
+    font-family: 'Alef';
+    color: #595959;
+    font-size: 18px;
+}
+.block_tree li a{
+    font-family: 'Alef';
+    color: #595959;
+   font-size: 16px;
+}
+#block-region-side-pre a:hover{
+    color: #ef6e30;
+}
+#block-region-side-post .navbar{
+    margin-right: 28px;
+}
+#mypersonalmenu {
+margin-right:10px;
+}
+#block-region-side-post li {
+    font-family: 'alef';
+    color: #595959;
+    line-height: 25px;
+}
+.block .header .block_action{
+    margin-bottom: -21px;
+}
+
+/*-------PAGE-QUIZ-------*/
+#page-mod-quiz-view  #region-bs-main-and-post{
+    width:760px !important;
+	float:right;
+}
+#page-mod-quiz-view  #region-main{
+padding-right:0 !important;
+}
+.que{
+    height: auto;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid;
+}
+.que .formulation{
+    background-color: transparent; !important;
+    border:none !important;
+    padding-right:0 !important;
+}
+
+.path-mod-quiz .content #responseform .que{
+    width: 760px !important;
+}
+.path-mod-quiz .que .info{
+    width: 150px !important;
+    border: 0;
+    padding:0 15px 0 15px ;
+    font-size: 20px;
+    height: auto;
+}
+.path-mod-quiz .que .content{
+    margin:auto;
+    width: 540px;
+    height: auto;
+}
+#page-mod-quiz-view #region-bs-main-and-post h2{
+width:auto;
+}
+#page-mod-quiz-view #region-main h3{
+    margin-top: 50px;
+    color: #595959;
+}
+#page-mod-quiz-view #region-main .generaltable{
+    font-family:"Alef" ;
+}
+.que .info{
+    background:url("/moodle27/theme/image.php?theme=cleanbrain&component=theme&image=petternSide") repeat scroll 0 0 rgba(0, 0, 0, 0)
+}
+.que .specificfeedback, .que .generalfeedback, .que .rightanswer, .que .im-feedback, .que .feedback, .que p{
+    font-size:19px;
+    font-weight: bold;
+    color: #5a5a5a;
+}
+#q1{
+    margin-top: 40px;
+}
+.info .no{
+    background-color: #ffffff;
+    font-size: 28px !important;
+    color: #595959;
+    width: 171px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f5ba9e;
+    margin-right: -15px !important;
+    padding-right: 9px;
+
+}
+.que span.qno{
+    font-size: 28px;
+    color: #595959;
+}
+#mod_quiz_navblock{
+    padding-top: 40px;
+}
+.multipages{
+    margin-right: 11px;
+}
+.path-mod-quiz .othernav a{
+    margin-right:16px ;
+}
+.path-mod-quiz .othernav input{
+    margin-right: 6px;
+}
+.path-mod-quiz .qnbutton{
+    border: none !important;
+}
+.path-mod-quiz .qnbutton.free:hover{
+    background-color:#ee5a12;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+.que.ddimageortext div.droparea img{
+   width:540px;
+}
+.que.ddmarker div.droparea img, form.mform fieldset#id_previewareaheader div.droparea img{
+  max-width:540px;
+}
+.singlebutton form input{
+    font-family: 'Alef';
+}
+#page-mod-quiz-summary #region-main h2{
+    width: auto;
+}
+#page-mod-quiz-attempt #region-bs-main-and-post #region-main{
+    width: 760px;
+}
+#page-mod-page-view .box iframe,#page-mod-page-view .box{
+    height:630px !important;
+}
+.block_adminblock select{
+    max-width: 79%;
+}
+#page-mod-quiz-attempt .que .content .answer{
+   font-size:14px !importqant;
+   font-family: 'Alef' !importqant;
+   
+}
+/*------STORY-LINE--------*/
+
+#page-mod-page-view #region-main #pageheading{
+    width: auto;
+}
+
+#page-mod-forum-view #page-content #region-main h2{
+    width: auto;
+}
+
+/*------other-definition--------*/
+.format-grid  .no-overflow strong{
+    font-size:14px;
+}
+.path-grade-report-grader .gradeparent .floater{
+   display:none;
+}
+/*------report-grade--------*/
+#page-grade-report-grader-index #page-content{
+   width:80%;
+}
+#page-grade-report-grader-index .row-fluid .span9{
+   float:left;
+}
+#page-grade-report-grader-index #block-region-side-pre{
+   float:right;
+}
+.gradeparent{
+   width:150%;
+}
+.dir-rtl.path-grade-report-grader .gradeparent .cell{
+    text-align:left;
+	order-left-width: 1px;
+    border-right-width: 0;
+}
+.dir-rtl.path-grade-report-grader .gradeparent .category{
+    text-align:right;
+}
+.dir-rtl.path-grade-report-grader .gradeparent .heading .cell, .dir-rtl.path-grade-report-grader .gradeparent .avg .cell, .dir-rtl.path-grade-report-grader .gradeparent .user.cell{
+    text-align:right;
+	 border:1px solid #ddd;
+}
+.path-grade-report-grader .gradeparent table{
+    border:1px solid #ddd;
+}
+.dir-rtl.path-grade-report-grader .gradeparent .cell{
+    border:1px solid #ddd;
+}
+
+.course-content ul.gtopics h3.sectionname{
+display:none;
+}
+
