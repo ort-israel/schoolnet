@@ -149,7 +149,7 @@ class theme_clean_hashmal_core_renderer extends theme_bootstrapbase_core_rendere
 
 
         }
-        $str = html_writer::alist($settings_items, array('class' => 'links-navigation'));
+        $str = html_writer::alist($settings_items, array('class' => 'links-navigation', 'id' => 'hashmal-links-navigation'));
         return $str;
     }
 }

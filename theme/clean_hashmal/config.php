@@ -40,6 +40,7 @@ $THEME->doctype = 'html5';
 $THEME->parents = array('bootstrapbase');
 $THEME->sheets = array('custom');
 $THEME->supportscssoptimisation = false;
+$THEME->javascripts_footer = array('clean_hashmal');
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = true;
 $THEME->editor_sheets = array();

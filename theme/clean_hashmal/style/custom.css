@@ -1,8 +1,9 @@
 /* Custom CSS
 -------------------------*/
-body{
+body {
     padding-top: 40px; /* override 60px of bootstrap */
 }
+
 .page-context-header .page-header-headings {
     display: flex;
     flex-direction: row-reverse;
@@ -12,9 +13,11 @@ body{
     background-position: 100px -72px;
     margin-top: 0;
 }
+
 .logo_img {
     display: none;
 }
+
 @media screen and (min-width: 768px) {
 
     .logo_img {
@@ -25,6 +28,7 @@ body{
         display: none;
     }
 }
+
 .logo-ort {
     background: url([[pix:theme|ort_logo]]) no-repeat 0 0 transparent;
     display: inline-block;
@@ -34,7 +38,7 @@ body{
     overflow: hidden;
 }
 
-ul.links-navigation{
+ul.links-navigation {
     display: flex;
     flex-direction: row;
     background-color: #000000;
@@ -42,16 +46,30 @@ ul.links-navigation{
     margin: 0;
 }
 
-.links-navigation li{
+.links-navigation li {
     padding: 10px;
     margin: 0 10px;
 }
 
-.links-navigation a{
+.links-navigation .here {
+    background-color: #fff;
+}
+
+.links-navigation a {
     color: #fff;
     text-decoration: none;
-    font-weight:bold;
+    font-weight: bold;
 }
+
+.links-navigation .here a {
+    color: #bb2020;
+
+}
+/* hise the backto link */
+.header.backto{
+    display: none;
+}
+
 /* body */
 
 .flexsections:not(.flexsections-level-0) {
