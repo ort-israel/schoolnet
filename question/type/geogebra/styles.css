@@ -1,0 +1,10 @@
+article * input {
+    height: auto !important;
+    margin: auto !important;
+}
+
+.hover {
+    border: 2px dashed #000;
+    background: rgba(192,192,192,0.5);
+    opacity: 0.4;
+}
