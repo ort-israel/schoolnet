@@ -1,0 +1,68 @@
+Subpage
+=======
+
+Copyright 2015 The Open University
+
+
+Thes subpage module allows users to create, manage, and view lists of Moodle
+activities separately from the main course page
+
+
+Warning:
+
+We support the subpage module in Moodle 2.8 but it is likely that this module
+will be discontinued in a future version. However that might be some way off -
+we are likely to continue to support it through Moodle 3.0 and possibly beyond.
+
+Limitations:
+
+The subpage module does not require any core changes. However, if you use it
+without making core changes you will find that you are constantly redirected
+back to the course page when you expected to be on the subpage.
+
+If you would like a patch that you can apply - at your own risk, of course,
+as is this whole thing, see the README file for one of the branches (however
+we haven't provided a current patch, sorry).
+
+Also please note that if you put something on a subpage it will seem natural
+for the subpage to be included in the breadcrumbs, but it is not. We have
+implemented code to address this as part of our theme; doing this properly
+would require a significant core change which we haven't implemented yet.
+
+Support:
+
+We cannot offer direct support. Please do not contact me directly.
+
+Bug reports:
+
+Please report bugs using the 'Issues' tab on GitHub.
+
+Before reporting a bug, please ensure you are running the latest version of
+the subpage that is available from:
+
+https://github.com/moodleou/moodle-mod_subpage
+
+In the bug report, please include your Moodle version (e.g. 2.3.2) and your
+subpage version (which you can find under plugins/activities page). 
+
+Status:
+
+Development code. This has not been fully tested and may contain serious bugs.
+Please see the current stable branch if you want a tested version for a specific
+Moodle release.
+
+Requires:
+
+Moodle 2.6+
+Postgres / MySQL
+
+Install:
+
+Place the contents of this source tree into your Moodle installation so that
+within your Moodle root, this file is mod/subpage/README. Then visit the
+Moodle notifications page to install.
+
+Documentation:
+
+None. Please feel free to contribute documentation in the relevant area of
+the MoodleDocs wiki.

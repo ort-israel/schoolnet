@@ -1,0 +1,52 @@
+#page-mod-subpage-view .stealthed,
+#page-mod-subpage-view .stealthed .instancename {
+    color: #444;
+}
+
+#page-mod-subpage-view .dimmed,
+#page-mod-subpage-view .dimmed .instancename {
+    color: #444;
+}
+
+#page-mod-subpage-view li.activity {
+    position: relative;
+}
+#page-mod-subpage-view li.activity .actions {
+    top: 5px;
+}
+
+#page-mod-subpage-view .section_add_menus {
+    padding-bottom: 2em;
+}
+
+#page-mod-subpage-view .clipboard {
+    padding-bottom: 1em;
+}
+#page-mod-subpage-view.editing .singlebutton {
+    float: left;
+    margin-left: 10px;
+}
+
+#page-mod-subpage-view div.groupinglabel {
+    color: #444;
+    font-size: 0.8em;
+    margin: -8px 0 8px;
+}
+
+#page-mod-subpage-view .sectiontitle {
+    margin-right: 0.3em;
+    padding: 3px 3px 3px 3px;
+    line-height: 1.3;
+}
+
+#page-mod-subpage-view .addsectionbutton {
+    float:left;
+}
+
+#page-mod-subpage-view .movetobutton {
+    float:right;
+}
+
+#page-mod-subpage-view .controlbuttons {
+    display: inline-block;
+}
