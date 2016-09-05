@@ -1,0 +1,84 @@
+/* Custom CSS
+-------------------------*/
+body{
+    padding-top: 40px; /* override 60px of bootstrap */
+}
+.page-context-header .page-header-headings {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 70px;
+    background: url([[pix:theme|site_sprite]]) no-repeat transparent;
+    background-position: 100px -72px;
+    margin-top: 0;
+}
+.logo_img {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+
+    .logo_img {
+        display: block;
+    }
+
+    .logo_img_mob {
+        display: none;
+    }
+}
+.logo-ort {
+    background: url([[pix:theme|ort_logo]]) no-repeat 0 0 transparent;
+    display: inline-block;
+    width: 12rem;
+    height: 6rem;
+    text-indent: -999rem;
+    overflow: hidden;
+}
+
+ul.links-navigation{
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    list-style: none;
+    margin: 0;
+}
+
+.links-navigation li{
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.links-navigation a{
+    color: #fff;
+    text-decoration: none;
+    font-weight:bold;
+}
+/* body */
+
+.flexsections:not(.flexsections-level-0) {
+    background-color: #f5f5f5;
+    padding: 15px
+}
+
+.format-flexsections .course-content ul.flexsections-level-1 > li.section.main {
+    border: none;
+}
+
+.sectionname {
+    line-height: 1.1;
+}
+
+.flexsections:not(.flexsections-level-0) h3 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.dir-rtl ul.flexsections-level-0 .label .mod-indent-outer {
+    padding-right: initial;
+}
+
+/* Custom CSS Settings
+-------------------------*/
+[[setting:customcss
+
+]
+]
