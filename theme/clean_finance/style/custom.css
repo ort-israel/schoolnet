@@ -1,0 +1,317 @@
+/* Custom CSS
+-------------------------
+a.logo {
+    background: url([[setting:logo]]) no-repeat 0 0;
+    display: block;
+    float: left;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.dir-rtl a.logo {
+    background: url([[setting:logo]]) no-repeat 100% 0;
+    display: block;
+    float: right;
+}
+*/
+/* Custom CSS Settings
+-------------------------
+[[setting:customcss]]
+*/
+
+/**------- General -------**/
+@font-face {
+    font-family: 'carmelit_regularregular';
+    src: url('http://moodle29.ort.org.il/theme/clean_finance/fonts/carmelit_regular/carmelitregular.eot');
+    src: url('http://moodle29.ort.org.il/theme/clean_finance/fonts/carmelit_regular/carmelitregular.eot?#iefix') format('embedded-opentype'),
+    url('http://moodle29.ort.org.il/theme/clean_finance/fonts/carmelit_regular/carmelitregular.woff') format('woff'),
+    url('http://moodle29.ort.org.il/theme/clean_finance/fonts/carmelit_regular/carmelitregular.ttf') format('truetype'),
+    url('http://moodle29.ort.org.il/theme/clean_finance/fonts/carmelit_regular/carmelitregular.svg#carmelit_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body,
+.container-fluid {
+    padding: 0px;
+    max-width: none;
+    font-size: 16px;
+}
+div, input, span {
+    font-family: carmelit_regularregular !important;
+}
+span, label, input {
+    font-size: 16px !important;
+}
+
+/**------- Header -------**/
+.tree-bg {
+    width: 100%;
+    background: url([[pix:theme|header_bg]]) no-repeat bottom center / cover; /*source - repeat - position - size*/
+    margin-bottom: 0px;
+    padding-top: 12px;
+    padding-bottom: 8.5%;
+	text-align: center; /* fix for ie8 update message */
+}
+.tree-bg .navbar-inner {
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+}
+.logo-catch-cash-wrapper {
+    width: 140px;
+    float: right;
+    display: inline-block;
+}
+.logo-catch-cash,
+.logo-bank,
+.logo-ort {
+    background: url([[pix:theme|finance]]) no-repeat 0 0;
+    text-indent: -999999px;
+    display: block;
+    overflow: hidden;
+}
+.logo-catch-cash {
+    background-position: 0px -55px;
+    width: 136px;
+    height: 64px;
+    margin-bottom: 3px;
+}
+.under-logo {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #3e3e3e;
+}
+.logo-bank {
+    background-position: 0px 0px;
+    width: 164px;
+    height: 41px;
+    float: right;
+    margin: 10px 22px 0px 0px;
+}
+.logo-ort {
+    background-position: 0px -130px;
+    width: 131px;
+    height: 68px;
+    float: left;
+    margin-left: 55px;
+}
+
+/**------- Sidebar -------**/
+.row-fluid .span3{
+}
+.block-region.span3 {
+    float: none;
+    vertical-align: top;
+    background-color: #3e3e3e;
+}
+.block-region.span3 li{
+    line-height: 1.5;
+}
+.block-region.span3 a:hover,
+.block-region.span3 a:active,
+.block-region.span3 a:focus {
+    color: #ff9900;
+}
+
+/**------- Blocks -------**/
+.block {
+    background-color: #3e3e3e;
+    color: #ffffff;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    border: none;
+    border-top: 1px solid #939393;
+}
+.block.block_html,
+.block.block_badges {
+    font-size: 20px;
+}
+.block .header {
+    border: none;
+    background-color: #3e3e3e !important;
+}
+.block .header h2{
+    font-weight: normal;
+    text-shadow: none;
+    color: #ffffff;
+ }
+.block a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.block.block_html ul {
+    margin: 10px 0;
+}
+.block.block_html a,
+.block_badges a{
+    text-decoration: none;
+}
+.block.block_html a:hover,
+.block.block_badges a:hover,
+.block.block_html a:active,
+.block.block_badges a:active,
+.block.block_html a:focus,
+.block.block_badges a:focus {
+    color: #ffffff;
+}
+.block_html .content li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+.block.block_html .content li > a {
+    padding: 6px 30px 1px 15px;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 50px;
+}
+.block.block_html .content li > a:before {
+    background-color: #5d5d5d;
+    border: 1px solid #989898;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+}
+.block.block_html .content li:hover > a:before {
+    background-color: #ff9900;
+    border: 1px solid #ffffff;
+}
+/* inst914,inst918(in grades page) - "back for tests page" block */
+/* inst920 - "badges" block */
+/* inst919 - "personal information" block */
+/* inst915 - "catch cash" block */
+#inst914,
+#inst918,
+#inst915 {
+    background-color: #5d5d5d;
+}
+#inst914 li > a,
+#inst918 li > a {
+     padding-top: 10px;
+}
+#inst914 .content li > a:before,
+#inst918 .content li > a:before {
+
+    background: url([[pix:theme|finance]])no-repeat 0px -218px;
+    height: 23px;
+    width: 23px;
+    border: none;
+    border-radius: 0;
+    right: 1px;
+    top: 5px;
+}
+#inst914 .content li:hover a:before,
+#inst918 .content li:hover a:before {
+
+    background-position: 0 -248px;
+}
+#inst915 .content li > a:before {
+    background-color: #7f7f7f;
+    border: 1px solid #929292;
+}
+#inst915 .content li:hover > a:before {
+    background-color: #ff9900;
+}
+#inst919 {
+
+    border-top: 2px solid #999999;
+}
+#inst919 .content li:hover a {
+    background-color: #585858;
+    border-color: #989898;
+
+}
+
+.block_badges .block_action{
+    display: none;
+}
+ul.badges {
+    margin-right: 28px;
+    margin-left: 13px;
+}
+.badges li {
+    width: 90px;
+    margin-left: 23px;
+}
+.badges a {
+    cursor: default;
+}
+.block_badges .badge-name {
+    font-size: 16px;
+}
+
+.block .qnbutton {
+    color: #000000;
+}
+
+/**------- Main Content -------**/
+.row-fluid .span9 {
+    padding-top: 27px;
+    margin-left: 0px;
+    float: none;
+    vertical-align: top;
+}
+#page-course-view-topics .row-fluid .span9 .row-fluid{
+    border-bottom: 2px solid #ddd;
+}
+#region-main {
+    margin-bottom: 0;
+    padding-right: 56px;
+    padding-left: 56px;
+}
+.path-course-view .completionprogress,
+.path-course-view li.activity span.autocompletion img{
+    display: none;
+}
+li.section .right {
+    display: none;
+}
+.course-content ul.topics li.section {
+    border-bottom: none;
+}
+.course-content ul.topics li.section .content {
+    margin-right: 0px;
+}
+.course-content ul.topics li.section .summary {
+    margin-bottom: 20px;
+}
+.course-content ul.section {
+    margin: 0px;
+}
+.dir-rtl .section .activity .mod-indent-outer {
+    padding-right: 0px;
+}
+
+/* questions of test*/
+.que .formulation span {
+    color: #333 !important;
+}
+
+/* fix for ordering question that goes write*/
+.que.ordering ul.sortablelist{
+	float: none;
+}
+/****** Media Query *******/
+@media screen and (min-width: 768px){
+    #page-content {
+        display: flex;
+        align-items: stretch;
+    }
+    .block-region.span3 {
+        width: 300px;
+        /*position: fixed;*/
+        /*height: 100%;*/
+    }
+    .row-fluid .span9 {
+        width: calc(100% - 300px);
+        /*margin-right: 300px;*/
+    }
+}
