@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Alef';
-    src: url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Alef/Alef-Regular.eot');
-    src: url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Alef/Alef-Regular.eot?#iefix') format('embedded-opentype'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Alef/Alef-Regular.woff') format('woff'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Alef/Alef-Regular.ttf') format('truetype'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Alef/Alef-Regular.svg#alefregular') format('svg');
+    src: url([[font:theme|Alef-Regular.eot]]);
+    src: url([[font:theme|Alef-Regular.eot]]) format('embedded-opentype'),
+		 url([[font:theme|Alef-Regular.woff]]) format('woff'),
+		 url([[font:theme|Alef-Regular.ttf]]) format('truetype'),
+		 url([[font:theme|Alef-Regular.svg]]) format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'oronBlabk';
-    src: url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Oron/oronblck.eot');
-    src: url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Oron/oronblck.eot?#iefix') format('embedded-opentype'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Oron/oronblck.woff') format('woff'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Oron/oronblck.ttf') format('truetype'),
-    url('http://moodle29.ort.org.il/theme/clean_heart/fonts/Oron/oronblck.svg#alefregular') format('svg');
+    src: url([[font:theme|oronblck.eot]]);
+    src: url([[font:theme|oronblck.eot]]) format('embedded-opentype'),
+		 url([[font:theme|oronblck.woff]]) format('woff'),
+		 url([[font:theme|oronblck.ttf]]) format('truetype'),
+		 url([[font:theme|oronblck.svg]]) format('svg');
     font-weight: normal;
     font-style: normal;
 }
