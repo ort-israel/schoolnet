@@ -8,3 +8,14 @@
  * Licensed pageviews limit: 10,000/month
  */ 
 
+
+@font-face{
+	font-family:'almoni-dl';
+	font-weight:400; /*(regular)*/
+	font-style: normal;
+	src: url('http://moodle29.ort.org.il/theme/clean_philosophy/fonts/almoni/almoni-dl-aaa-400.eot');
+	src: url('http://moodle29.ort.org.il/theme/clean_philosophy/fonts/almoni/almoni-dl-aaa-400.eot?#iefix') format('embedded-opentype'),
+		url('http://moodle29.ort.org.il/theme/clean_philosophy/fonts/almoni/almoni-dl-aaa-400.ttf') format('truetype'),
+		url('http://moodle29.ort.org.il/theme/clean_philosophy/fonts/almoni/almoni-dl-aaa-400.woff') format('woff'),
+		url('http://moodle29.ort.org.il/theme/clean_philosophy/fonts/almoni/almoni-dl-aaa-400.svg#almoni-dl-regular') format('svg');
+}

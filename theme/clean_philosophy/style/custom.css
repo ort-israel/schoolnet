@@ -6,26 +6,24 @@
         Purpose of the stylesheet follows.
 */
 
-
 /* ---------------------------------------------------------------------------- */
 /*                                   General                                    */
 /* ---------------------------------------------------------------------------- */
 
-@font-face{
-	font-family:'almoni-dl';
-	font-weight:400; /*(regular)*/
-	font-style: normal;
-	src: url([[font:theme|almoni-dl-aaa-400.eot]]);
-	src: url([[font:theme|almoni-dl-aaa-400.eot]]) format('embedded-opentype'),
-		 url([[font:theme|almoni-dl-aaa-400.ttf]]) format('truetype'),
-		 url([[font:theme|almoni-dl-aaa-400.woff]]) format('woff'),
-		 url([[font:theme|almoni-dl-aaa-400.svg]]) format('svg');
-}
-
 /* Extend the Grass image to the full extent of the screen
    and make all regular text black*/
-body
-{
+@font-face {
+    font-family: 'almoni-dl';
+    font-weight: 400; /*(regular)*/
+    font-style: normal;
+    src: url([[font:theme|almoni-dl-aaa-400.eot]]);
+    src: url([[font:theme|almoni-dl-aaa-400.eot]]) format('embedded-opentype'),
+    url([[font:theme|almoni-dl-aaa-400.ttf]]) format('truetype'),
+    url([[font:theme|almoni-dl-aaa-400.woff]]) format('woff'),
+    url([[font:theme|almoni-dl-aaa-400.svg#almoni-dl-regular]]) format('svg');
+}
+
+body {
     padding-top: 0;
     background: url([[pix:theme|HeaderBg]]) repeat-x left top;
     color: #363636;
@@ -35,30 +33,29 @@ body
 }
 
 /* Make all the link's color black*/
-a:link, a:visited
-{
+a:link, a:visited {
     color: #363636;
 }
 
 /* Put blue background Beneath the links*/
-.block a:hover
-{
+.block a:hover {
     background-color: #c6e9f0;
 }
 
 /* The original overflow of this class is "auto" but it makes horizontal scroll so I (Tsofiya) changed it for "hidden"*/
-.no-overflow{
+.no-overflow {
     overflow: hidden;
 }
+
 /* Give a 10px padding between breadcrumb and the page content
    and pull the breadcrumb up to "delete" the background's margin*/
-#page-navbar
-{
+#page-navbar {
     float: right;
     margin-top: 15px;
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    #page-navbar{
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    #page-navbar {
         /* Fix for chrome. There is a bug that table-cell (#page-navbar) get width of 1px,
         therefor there is margin-top of 15px even when there is no content*/
         margin-top: 0;
@@ -66,75 +63,76 @@ a:link, a:visited
 }
 
 /* Please note! the Header picture is inside the code in columns3.php file (a layout Theme file) */
-#page-header
-{
+#page-header {
     height: 190px;
     padding-top: 0px;
     margin-bottom: 15px;
 }
 
 /* set the page's width and make page's align: center */
-#page
-{
+#page {
     width: 960px;
     border-top-width: 0px;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-.forumsearch{
+.forumsearch {
     margin-bottom: 15px;
 }
+
 /* t.i.: fix the original width of the content section (74.4681%) to fit our needs*/
 .empty-region-side-post.used-region-side-pre #region-main.span8,
-.jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8{
+.jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8 {
     width: 79%;
     padding-right: 1%;
 }
+
 /* t.i.: fix the original width of the aside (23.0769%) to fit our needs-
    I put the "aside" inside a div ".block-region-wrapper" which gets the
    definition of: "width: 21%" for design needs (bg-img)
 */
 .row-fluid .span3,
 .empty-region-side-post.used-region-side-pre #block-region-side-pre.span4,
-.jsenabled.docked-region-side-post.used-region-side-pre #block-region-side-pre.span4{
+.jsenabled.docked-region-side-post.used-region-side-pre #block-region-side-pre.span4 {
     width: 100%;
 }
 
-.path-grade #page-content{
+.path-grade #page-content {
     clear: both;
 }
 
 .course-content ul.topics li.section .content,
-.course-content ul.topics li.section ul{
-    margin:  0;
+.course-content ul.topics li.section ul {
+    margin: 0;
     padding: 0;
 
 }
-.course-content ul li.section.main{
+
+.course-content ul li.section.main {
     border: 1px solid #eee;
     padding-bottom: 0;
 }
 
 /* reduce padding-right to center the content */
-.dir-rtl .section .activity .mod-indent-outer{
+.dir-rtl .section .activity .mod-indent-outer {
     padding-right: 20px;
     padding-left: 0;
 }
-.dir-rtl .section .activity .contentwithoutlink{
+
+.dir-rtl .section .activity .contentwithoutlink {
     padding-right: 0px;
 }
 
 /* remove the small caption: your learning tracking */
-#completionprogressid
-{
+#completionprogressid {
     display: none;
 }
 
 /* The background with the Frog */
 .content .sectionname,
 #region-main h2,
-.region-content h2.main{
+.region-content h2.main {
     background: url([[pix:theme|frog]]) no-repeat scroll 100% 100% #EDF1E7;
     border: 20px solid;
     border-top: 30px solid #DDE5D0;
@@ -146,13 +144,10 @@ a:link, a:visited
     font-size: 28px;
 }
 
-
 /* The background with the Frog in subPages*/
 .region-content h2.main {
     padding-top: 10px;
 }
-
-
 
 /* ---------------------------------------------------------------------------- */
 /*                                  Decorating the Quiz                         */
@@ -160,22 +155,22 @@ a:link, a:visited
 
 /* Fix layout in quiz pages*/
 .path-mod-quiz .empty-region-side-post.used-region-side-pre #region-main.span8,
-.path-mod-quiz .jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8{
+.path-mod-quiz .jsenabled.docked-region-side-post.used-region-side-pre #region-main.span8 {
     padding-right: 4.5%;
 }
 
-.path-mod-quiz #block-region-side-pre{
+.path-mod-quiz #block-region-side-pre {
     padding-top: 32px;
 }
 
 /* quiz's Introduction sections (Sections before the quiz starts) */
-#intro
-{
+#intro {
     margin: 10px 75px 15px;
     border: 1px solid #ddd;
 }
+
 /* General layout of question*/
-.que{
+.que {
     margin-bottom: 1.3em;
 }
 
@@ -184,64 +179,55 @@ a:link, a:visited
 }
 
 /* Info blocks to the left of each question Background */
-.que .info
-{
+.que .info {
     margin-bottom: 0em;
     background: url([[pix:theme|QuizInfoBackground]]) repeat 0 0;
 }
 
-.que .info h3
-{
+.que .info h3 {
     font-family: 'almoni-dl', sans-serif;
     font-weight: 900;
 }
 
 /* Hide extra information in the info block */
 .que .info .state,
-.que .info .questionflag{
+.que .info .questionflag {
     display: none;
 }
 
 /* The question itself */
-.que .formulation
-{
+.que .formulation {
     padding-top: 15px;
-    background-color: rgb(244,247,240);
+    background-color: rgb(244, 247, 240);
     border: none;
 }
 
-.formulation .answer input[type="checkbox"]
-{
+.formulation .answer input[type="checkbox"] {
     margin-left: 7px;
 }
 
-.formulation .answer input[type="radio"]
-{
+.formulation .answer input[type="radio"] {
     margin-left: 7px;
 }
 
 /* Set the Question's text to Almoni font */
-.formulation .qtext p
-{
+.formulation .qtext p {
     font-family: 'almoni-dl', sans-serif;
 }
 
-
 /* Set the Question's submit button to Almoni font */
-.formulation input.submit
-{
+.formulation input.submit {
     font-family: 'almoni-dl', sans-serif;
     font-size: 16px;
 }
 
 /* The line that explain what to do in the question */
-.formulation .ablock .prompt
-{
+.formulation .ablock .prompt {
     font-weight: 700;
 }
 
 /* First question as title */
-#q1.informationitem .content{
+#q1.informationitem .content {
     background: url([[pix:theme|frog]]) no-repeat scroll 100% 100% #EDF1E7;
     border: 20px solid;
     border-top: 30px solid #DDE5D0;
@@ -252,35 +238,35 @@ a:link, a:visited
     font-family: 'almoni-dl', sans-serif;
 }
 
-#q1.informationitem .content .formulation{
+#q1.informationitem .content .formulation {
     padding: 0;
     background: transparent;
 }
 
 #q1.informationitem .content .formulation,
 #q1.informationitem .content .formulation .qtext,
-#q1.informationitem .content .formulation p{
+#q1.informationitem .content .formulation p {
     margin-bottom: 0;
 }
-
 
 /* ------------------------- */
 /* Block: navigation in quiz */
 /* ------------------------- */
 
-#mod_quiz_navblock:before{
+#mod_quiz_navblock:before {
     width: 12em;
-    background-position:  -5.5em 0;
+    background-position: -5.5em 0;
     top: -0.2em;
 }
-#mod_quiz_navblock .header:before{
+
+#mod_quiz_navblock .header:before {
     content: " " url([[pix:theme|Figure]]);
     position: absolute;
     right: 0.5em;
     top: -2.3em;
 }
 
-#mod_quiz_navblock .title h2{
+#mod_quiz_navblock .title h2 {
     padding-right: 3em;
 }
 
@@ -288,11 +274,11 @@ a:link, a:visited
     padding-top: 70px;
 }*/
 
-#mod_quiz_navblock .qn_buttons{
+#mod_quiz_navblock .qn_buttons {
     padding-right: 2em;
 }
 
-.path-mod-quiz .qn_buttons a.qnbutton{
+.path-mod-quiz .qn_buttons a.qnbutton {
     float: left;
     border: none;
     background: none;
@@ -300,50 +286,48 @@ a:link, a:visited
     width: 1em;
 }
 
-.path-mod-quiz .qnbutton.thispage .thispageholder{
+.path-mod-quiz .qnbutton.thispage .thispageholder {
     border: none;
 }
 
 /* Button: finish quiz ... on the right navigation block */
-#mod_quiz_navblock  a.endtestlink
-{
+#mod_quiz_navblock a.endtestlink {
     /* fallback */
-    background-color: rgb(239,239,239);
+    background-color: rgb(239, 239, 239);
     background-repeat: repeat-x;
 
     /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(239,239,239)), to(rgb(214,214,214)));
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(239, 239, 239)), to(rgb(214, 214, 214)));
 
     /* Safari 5.1, Chrome 10+ */
-    background: -webkit-linear-gradient(top, rgb(239,239,239), rgb(214,214,214));
+    background: -webkit-linear-gradient(top, rgb(239, 239, 239), rgb(214, 214, 214));
 
     /* Firefox 3.6+ */
-    background: -moz-linear-gradient(top, rgb(239,239,239), rgb(214,214,214));
+    background: -moz-linear-gradient(top, rgb(239, 239, 239), rgb(214, 214, 214));
 
     /* IE 10 */
-    background: -ms-linear-gradient(top, rgb(239,239,239), rgb(214,214,214));
+    background: -ms-linear-gradient(top, rgb(239, 239, 239), rgb(214, 214, 214));
 
     /* Opera 11.10+ */
-    background: -o-linear-gradient(top, rgb(239,239,239), rgb(214,214,214));
+    background: -o-linear-gradient(top, rgb(239, 239, 239), rgb(214, 214, 214));
 
     width: 96px;
     hight: 30px;
 
-    border: 1px solid rgb(180,178,168);
+    border: 1px solid rgb(180, 178, 168);
     padding-right: 10px;
 
     position: relative;
     right: 35px;
 }
 
-#mod_quiz_navblock .singlebutton{
+#mod_quiz_navblock .singlebutton {
     display: none;
 }
 
 /* ---------------------------------------------------------------------------- */
 /*            Decorating the Blocks on the right side of the page               */
 /* ---------------------------------------------------------------------------- */
-
 
 /* ------------------ */
 /*       General      */
@@ -359,13 +343,12 @@ a:link, a:visited
 }
 
 /* Disable ""minimize"" & ""attach to sidebar" mini buttons */
-#block-region-side-pre .block_action
-{
+#block-region-side-pre .block_action {
     display: none;
 }
 
 /* Put line separator after each block */
-.block:before{
+.block:before {
     background: url([[pix:theme|navBarSeperator]]) no-repeat scroll 0 0 transparent;
     content: "";
     height: 10px;
@@ -375,56 +358,55 @@ a:link, a:visited
 }
 
 /* Fix all block titles (after handling float in the Quote block)*/
-.block .title h2{
-	padding: 3px 0;
+.block .title h2 {
+    padding: 3px 0;
     font-size: 1.4em;
     font-weight: bold;
     color: #363636;
 }
-.block .content{
+
+.block .content {
     padding: 4px 0;
 }
+
 /* Design the top of the aside menu */
-.block-region-wrapper{
+.block-region-wrapper {
     background: url([[pix:theme|navBarBg]]) repeat 0 0;
     width: 21%;
 }
-#block-region-side-pre{
+
+#block-region-side-pre {
     padding: 0 10px;
 }
-body:not(.path-mod-quiz) #block-region-side-pre{
+
+body:not(.path-mod-quiz) #block-region-side-pre {
     background: url([[pix:theme|navBarChar]]) no-repeat 90px 7px;
     padding-top: 50px;
 }
 
 /* Putting green bulletin in every custom html block */
-.block_html ul
-{
+.block_html ul {
     list-style-image: url([[pix:theme|BullMain]]);
 }
 
 /* Add some space between bulletin */
-.block_html ul li
-{
+.block_html ul li {
     padding-bottom: 5px;
 }
 
-.block_html ul li a
-{
+.block_html ul li a {
     font-size: 16px;
 }
 
 /* Font for the two upper blocks headline*/
-.block h2
-{
+.block h2 {
     font-family: 'almoni-dl', sans-serif;
     font-weight: 700;
     font-size: 18px;
 }
 
 /* Font for the two blocks content (links) */
-.block ul li span a
-{
+.block ul li span a {
     font-family: 'almoni-dl', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -434,20 +416,17 @@ body:not(.path-mod-quiz) #block-region-side-pre{
 /* Block: course subjects */
 /* ---------------------- */
 
-#mycoursecontent
-{
+#mycoursecontent {
     padding-right: 5px;
     border-bottom: 0;
     margin-top: 1px;
 }
 
-
 /* -------------------- */
 /* Block: personal menu */
 /* -------------------- */
 
-#mypersonalmenu
-{
+#mypersonalmenu {
     padding-right: 5px;
     margin-bottom: 0;
     margin-top: 1px;
@@ -456,22 +435,22 @@ body:not(.path-mod-quiz) #block-region-side-pre{
 /* ----------------------- */
 /* Block: The Random Quote */
 /* ----------------------- */
-.block_glossary_random{
+.block_glossary_random {
     padding-bottom: 30px;
 }
-.block_glossary_random .header h2{
+
+.block_glossary_random .header h2 {
     display: none;
 }
-.block_glossary_random .content
-{
-    background-color: rgb(253,227,191);
+
+.block_glossary_random .content {
+    background-color: rgb(253, 227, 191);
     position: relative;
     padding: 30px 20px 25px 20px;
 }
 
-.block_glossary_random .content h3
-{
-	padding: 0;
+.block_glossary_random .content h3 {
+    padding: 0;
     margin-top: 0;
     font-family: 'almoni-dl', sans-serif;
     font-size: 18px;
@@ -479,30 +458,26 @@ body:not(.path-mod-quiz) #block-region-side-pre{
     text-shadow: none;
 }
 
-.block_glossary_random .content p
-{
+.block_glossary_random .content p {
     font-family: 'almoni-dl', sans-serif;
     font-weight: 400;
     font-size: 16px;
 }
 
-.block_glossary_random .content:before
-{
+.block_glossary_random .content:before {
     content: url([[pix:theme|leftBottomArrow]]);
-    position:  absolute;
+    position: absolute;
     bottom: -20px;
     left: 0;
 }
 
-.block_glossary_random .content:after
-{
+.block_glossary_random .content:after {
     content: url([[pix:theme|rightTopArrow]]);
     position: absolute;
     top: -8px;
     right: -15px;
 }
 
-.block_glossary_random .content .footer
-{
+.block_glossary_random .content .footer {
     display: none;
 }

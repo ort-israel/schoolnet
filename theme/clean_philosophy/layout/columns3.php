@@ -51,7 +51,7 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->favicon(); ?>" />
     <!-- added -->
         <!-- FontFace support -->
-        <link rel="stylesheet" href="<?php echo $CFG->wwwroot .'/theme/'. $PAGE->theme->name ?>/fonts/almoni/fontAlmoni.css" type="text/css" />
+        <!--<link rel="stylesheet" href="<?php //echo $CFG->wwwroot .'/theme/'. $PAGE->theme->name ?>/fonts/almoni/fontAlmoni.css" type="text/css" />-->
         <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
     <!-- up to here -->
     <?php echo $OUTPUT->standard_head_html() ?>
