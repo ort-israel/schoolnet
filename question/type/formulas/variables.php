@@ -99,7 +99,7 @@ class qtype_formulas_variables {
             , 'cos', 'cosh' , 'deg2rad', 'exp', 'expm1', 'floor', 'is_finite', 'is_infinite', 'is_nan'
             , 'log10', 'log1p', 'rad2deg', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'log', 'round', 'fact') );
         $this->func_binary = array_flip( array('log', 'round', 'atan2', 'fmod', 'pow', 'min', 'max', 'comb', 'perm', 'gcd', 'lcm') );
-        $this->func_special = array_flip( array('fill', 'len', 'pick', 'sort', 'sublist', 'inv', 'map', 'sum', 'concat', 'join', 'str', 'diff') );
+        $this->func_special = array_flip( array('fill', 'len', 'pick', 'sort', 'sublist', 'inv', 'map', 'sum', 'concat', 'join', 'str', 'diff', 'poly') );
         $this->func_all = array_merge($this->func_const, $this->func_unary, $this->func_binary, $this->func_special);
         $this->binary_op_map = array_flip( array('+','-','*','/','%','>','<','==','!=','&&','||','&','|','<<','>>','^') );
         // $this->binary_op_reduce = array_flip( array('||','&&','==','+','*') );
@@ -257,7 +257,12 @@ class qtype_formulas_variables {
 
     // return the text with the variables, or evaluable expressions, substituted by their values
     function substitute_variables_in_text(&$vstack, $text) {
-        $funcPattern = '/(\{=[^{}]+\}|\{([A-Za-z][A-Za-z0-9_]*)(\[([0-9]+)\])?\})/';
+		// Original funcPattern:
+        //$funcPattern = '/(\{=[^{}]+\}|\{([A-Za-z][A-Za-z0-9_]*)(\[([0-9]+)\])?\})/';
+		
+		// Changed funcPattern to allow curly braces within text. e.g: {=f("hi{yo}")}
+		$funcPattern = '/(\{=(("[^"]*")*[^{}])+\}|\{([A-Za-z][A-Za-z0-9_]*)(\[([0-9]+)\])?\})/';
+		
         $results = array();
         $ts = explode("\n`",$text);     // the ` is the separator, so split it first
         foreach ($ts as $text) {
@@ -266,7 +271,8 @@ class qtype_formulas_variables {
                 $expr = substr($splitted[$i], $splitted[$i][1]=='=' ? 2 : 1 , -1);
                 $res = $this->evaluate_general_expression($vstack, $expr);
                 if ($res->type != 'n' && $res->type != 's')  throw new Exception();     // skip for other type
-                $splitted[$i] = $res->value;
+				$val = $res->value;
+				$splitted[$i] = $val;
             } catch (Exception $e) {}   // Note that the expression will not be replaced if error occurs. Also, no error throw in any cases
             $results[] = implode('', $splitted);
         }
@@ -743,8 +749,7 @@ class qtype_formulas_variables {
         $this->replace_middle($vstack, $expression, $res->openloc, $res->closeloc+1, $elementtype=='n'?'ln':'ls', $list);
         return true;
     }
-
-
+	
     // handle the few function for the array of number or string
     // @return boolean of whether this syntax is found or not
     private function handle_special_functions(&$vstack, &$expression) {
@@ -858,6 +863,44 @@ class qtype_formulas_variables {
                 $sum = 0;
                 foreach ($values[0] as $v)  $sum += floatval($v);
                 $this->replace_middle($vstack, $expression, $l, $r, 'n', $sum);
+                return true;
+			case 'poly':
+				if ($sz==1 && $typestr=='ln') {
+					$varName = 'x';
+					$vals = $values[0];
+				}
+				else if ($sz==2 && $typestr=='s,ln') {
+					$varName = $values[0];
+					$vals = $values[1];
+				}
+				else break;
+
+				$pow = count($vals);
+				$pp = '';
+                foreach ($vals as $v) {
+					$pow--;
+					if ($v == 0)
+						continue;
+					$ss = ($pp != '' && $v > 0) ? '+' : '';
+					if ($pow == 0)
+						$pp .= "{$ss}{$v}";
+					else {
+						if ($v == 1)
+							$coff = "{$ss}";
+						else if ($v == -1)
+							$coff = "-";
+						else
+							$coff = "{$ss}{$v}";
+						
+						if ($pow == 1)
+							$pp .= "{$coff}{$varName}";
+						else
+							$pp .= "{$coff}{$varName}^{{$pow}}";
+					}
+				}
+				if ($pp == '')
+					$pp = '0';
+                $this->replace_middle($vstack, $expression, $l, $r, 's', $pp);
                 return true;
             case 'concat':
                 if (!($sz>=2 && ($types[0][0]=='l')))  break;
