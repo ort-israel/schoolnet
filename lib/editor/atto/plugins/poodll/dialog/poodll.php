@@ -33,7 +33,6 @@
 
 define('NO_MOODLE_COOKIES', false);
 require(__DIR__ . '../../../../../../../config.php');
-require_once($CFG->dirroot . '/filter/poodll/poodllresourcelib.php');
 
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url('/lib/editor/atto/plugins/poodll/dialog/poodll.php');
@@ -47,6 +46,7 @@ if (isset($SESSION->lang)) {
 require_login();  // CONTEXT_SYSTEM level.
 $editor = get_texteditor('atto');
 //$plugin = $editor->get_plugin('poodll');
+$iframeid = optional_param('iframeid', 'none', PARAM_TEXT);
 $itemid = optional_param('itemid', '', PARAM_TEXT);
 $recorder = optional_param('recorder', '', PARAM_TEXT);
 $updatecontrol = optional_param('updatecontrol', '', PARAM_TEXT);
@@ -59,26 +59,26 @@ $callbackjs = '';//'atto_poodll_button.updatefilename';
 // Load the recorder.
 switch($recorder){
  case 'video':
- 	$recorderhtml =  fetchVideoRecorderForSubmission('auto', 'none', $updatecontrol, $usercontextid,'user','draft',$itemid,0,$callbackjs);
+ 	$recorderhtml =  \filter_poodll\poodlltools::fetchVideoRecorderForSubmission('auto', 'none', $updatecontrol, $usercontextid,'user','draft',$itemid,0,$callbackjs);
 	$instruction = get_string('recordtheninsert', 'atto_poodll');
  	break;
  case 'snapshot':
- 	$recorderhtml =  fetchSnapshotCameraForSubmission($updatecontrol, "apic.jpg",350,400,$usercontextid,'user','draft',$itemid,$callbackjs);
+ 	$recorderhtml =  \filter_poodll\poodlltools::fetchSnapshotCameraforSubmission($updatecontrol, "apic.jpg",350,400,$usercontextid,'user','draft',$itemid,$callbackjs);
 	$instruction = get_string('snaptheninsert', 'atto_poodll');
  	break;
  case 'whiteboard':
- 	$recorderhtml =  fetchWhiteboardForSubmission($updatecontrol, $usercontextid,'user','draft',$itemid,400,350,"",$usewhiteboard,$callbackjs);
+ 	$recorderhtml =  \filter_poodll\poodlltools::fetchWhiteboardForSubmission($updatecontrol, $usercontextid,'user','draft',$itemid,400,350,"",$usewhiteboard,$callbackjs);
 	$recorderhtml = "<div class='jswhiteboard'>" . $recorderhtml . "</div>"; 
 	$instruction = get_string('drawtheninsert', 'atto_poodll');
  	break;
  case 'audiored5':
- 	$recorderhtml =  fetchAudioRecorderForSubmission('auto', 'none', $updatecontrol, 
+ 	$recorderhtml =  \filter_poodll\poodlltools::fetchAudioRecorderForSubmission('auto', 'none', $updatecontrol,
 				$usercontextid,'user','draft',$itemid,0,$callbackjs);
 	$instruction = get_string('recordtheninsert', 'atto_poodll');
  	break; 		
  case 'audiomp3':
  default:
-	$recorderhtml =  fetchMP3RecorderForSubmission($updatecontrol, $usercontextid ,'user','draft',$itemid,0,$callbackjs);
+	$recorderhtml =  \filter_poodll\poodlltools::fetchMP3RecorderForSubmission($updatecontrol, $usercontextid ,'user','draft',$itemid,0,$callbackjs);
 	$instruction = get_string('recordtheninsert', 'atto_poodll');
 }
 
@@ -86,7 +86,10 @@ $PAGE->set_pagelayout('embedded');
 $PAGE->set_title(get_string('dialogtitle', 'atto_poodll'));
 $PAGE->requires->css(new moodle_url($CFG->wwwroot . '/lib/editor/atto/plugins/poodll/dialog/poodll.css'));
 $PAGE->requires->js(new moodle_url($CFG->wwwroot. '/filter/poodll/module.js'),true);
+$PAGE->requires->jquery();
 
+//load our resize script
+$PAGE->requires->js_call_amd("filter_poodll/responsiveiframe", 'init', array(array('iframeid' => $iframeid)));
 
 echo $OUTPUT->header();
 ?>
