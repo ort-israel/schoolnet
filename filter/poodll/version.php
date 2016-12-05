@@ -19,14 +19,14 @@
  *
  * @package    filter
  * @subpackage poodll
- * @copyright  2012 Justin Hunt bitwalkerjapan@gmail.com
+ * @copyright  2015 Justin Hunt poodllsupport@gmail.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2015120201; 
-$plugin->requires  = 2011070100.00; 
+$plugin->version   = 2016081402;
+$plugin->requires  = 2016052300;//moodle 3.1.0
 $plugin->component = 'filter_poodll'; 
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '2.7.9(Build 2015120201)';
+$plugin->release   = '3.0.1(Build 2016081402)';

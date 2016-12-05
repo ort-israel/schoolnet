@@ -1,0 +1,44 @@
+Change List
+=========
+Version 3.0.1(Build 2016081402)
+-fixed issue with browsers caching placeholder audio/video and not using transcoded media
+
+Version 3.0.0(Build 2016081401)
+-tweaks to support callbackjs for recorders
+-preset improvements
+-support for ad hoc shimming in templates
+-support auto iframe resizing
+
+Version 2.8.7(Build 2016071605)
+-Added AWS SDK for PHP version 2.3 (for older php versions)
+-Tweaked ad-hoc task for moving from s3
+-fixed installation zip file which would not pass verification on install
+-added support for @@URLPARAM:xx@@ variables in PoodLL filter templates
+-altered default templates for audiojs and others
+
+Version 2.8.6(Build 2016071604)
+First release of PoodLL 3
+-html5 recorders
+-template based filter system
+
+Version 2015121106
+Fixed a bug that caused the whiteboard and recorders to fail to submit their media, when jquery was not present.
+
+Version 2015121105
+Fixed a bug that caused widgets(once player etc) to never evaluate registration properly, and fail to load with a registration error.
+Removed erroneous message from settings that talked about a literally canvas issue that no longer exists
+Made the default whiteboard literally canvas again
+
+Version 2015121104
+Fixed a bug preventing LiterallyCanvas from saving images properly in questions
+Fixed bug that prevented mobile devices being detected properly
+
+Version 2015121103
+Fixed bug that affected repository and atto file inserts
+
+Version 2015121102
+Removed drawingbpard.js files that were breaking require.js
+
+Version 2015121101
+Lots of refacoring and support for Moodle 3.0
+
