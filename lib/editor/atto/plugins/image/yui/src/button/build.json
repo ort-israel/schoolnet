@@ -3,6 +3,11 @@
   "builds": {
     "moodle-atto_image-button": {
       "jsfiles": [
+        "const.js",
+        "utility.js",
+        "delete-mutation-observer.js",
+        "editable-img.js",
+        "resizable.js",
         "button.js"
       ]
     }

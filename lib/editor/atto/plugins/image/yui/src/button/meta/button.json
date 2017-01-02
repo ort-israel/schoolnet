@@ -1,7 +1,10 @@
 {
     "moodle-atto_image-button": {
         "requires": [
-            "moodle-editor_atto-plugin"
+            "moodle-editor_atto-rangy",
+            "moodle-editor_atto-plugin",
+            "resize",
+            "resize-plugin"
         ]
     }
 }

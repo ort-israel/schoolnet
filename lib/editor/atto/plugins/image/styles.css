@@ -1,9 +1,69 @@
+.atto_control_nullify,
+.atto-image-wrapper,
+.atto-image-wrapper.atto_control,
+.atto-image-wrapper *.atto_control,
+.atto-image-wrapper.atto_control *.atto_control,
+.atto-image-resize-overlay {
+    position: static;
+    right: auto;
+    bottom: auto;
+    display: inline-block;
+
+    background-color: transparent;
+
+    /* Override the parent's text-align. */
+    text-align: left;
+}
+
+/* Image alignment classes. */
+.atto-image-wrapper.atto-image-align-left {
+    float: left;
+    margin: 0 .5em 0 0;
+}
+
+.atto-image-wrapper.atto-image-align-center {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.atto-image-wrapper.atto-image-align-right {
+    float: right;
+    margin: 0 0 0 .5em;
+}
+
+/* Override the atto_align's align classes. */
+.atto-image-wrapper,
+.atto-image-wrapper.atto_control {
+    text-align: left !important;
+}
+
+.atto_control_nullify img,
+.atto-image-wrapper img,
+.atto-image-wrapper.atto_control img,
+.atto-image-wrapper *.atto_control img,
+.atto-image-wrapper.atto_control *.atto_control img,
+.atto-image-resize-overlay img {
+    background-color: transparent;
+}
+
+.atto_control_nullify:focus .atto_control,
+.atto-image-wrapper:focus .atto_control,
+.atto-image-wrapper .atto_control:focus .atto_control,
+.atto-image-resize-overlay:focus .atto_control,
+.atto_control_nullify:hover .atto_control,
+.atto-image-wrapper:hover .atto_control,
+.atto-image-wrapper .atto_control:hover .atto_control,
+.atto-image-resize-overlay:hover .atto_control {
+    display: inline-block;
+}
+
 .atto_image_preview {
     width: 100%;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+
 .atto_image_preview_box {
     max-height: 200px;
     margin-bottom: 1em;
@@ -17,13 +77,172 @@
 .atto_image_size {
     display: inline-block;
 }
+
 .atto_image_size input[type=checkbox] {
     margin-left: 1em;
     margin-right: 1em;
 }
+
 .atto_image_size input[type=text] {
     width: 3em;
 }
+
 .atto_image_size label {
     display: inline-block;
 }
+
+.atto_image_button_text-top {
+    vertical-align: text-top;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_middle {
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-bottom {
+    vertical-align: text-bottom;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-top.img-responsive,
+.atto_image_button_middle.img-responsive,
+.atto_image_button_text-bottom.img-responsive {
+    max-width: calc(100% - 1em);
+}
+
+.atto_image_button_left {
+    float: left;
+    margin: 0 0.5em 0 0;
+    max-width: calc(100% - 1em);
+}
+
+.atto_image_button_right {
+    float: right;
+    margin: 0 0 0 0.5em;
+    max-width: calc(100% - 1em);
+}
+
+.atto-image-wrapper,
+.atto-image-wrapper.atto_control {
+    vertical-align: bottom;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    overflow: visible;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.atto-image-wrapper > .atto-image-editable-helper-wrapper {
+    position: absolute;
+}
+
+.atto-image-resize-overlay {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.atto-image-resize-overlay-wrapper {
+    border: 2px solid #0096fd;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner {
+    background-image: none;
+    background-color: #0096fd;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    resize: none;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-tr {
+    bottom: 0px;
+    right: 0px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-br {
+    bottom: 0px;
+    right: 0px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-tl {
+    bottom: 0px;
+    right: 0px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-bl {
+    bottom: 0px;
+    right: 0px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-tl {
+    top: -5px;
+    left: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-t {
+    top: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-tr {
+    top: -5px;
+    right: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-r {
+    bottom: -5px;
+    right: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-br {
+    bottom: -5px;
+    right: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-b {
+    bottom: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-bl {
+    bottom: -5px;
+    left: -5px;
+}
+
+.atto-image-resize-overlay-wrapper .yui3-resize-handle-inner-l {
+    left: -5px;
+}
+
+.atto-image-helper-hide-until-save {
+    display: none;
+}
+
+.atto-image-wrapper > img {
+    margin: 0px;
+    position: absolute;
+
+    /* Override the parent's text-align. */
+    text-align: left;
+}
+
+.atto-image-wrapper.atto-image-helper-editable ::-moz-selection,
+.atto-image-wrapper.atto-image-helper-editable * ::-moz-selection {
+    background: none;
+}
+
+.atto-image-wrapper.atto-image-helper-editable ::selection,
+.atto-image-wrapper.atto-image-helper-editable * ::selection {
+    background: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
