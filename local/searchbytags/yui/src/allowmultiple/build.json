@@ -1,0 +1,10 @@
+{
+  "name": "moodle-local_searchbytags-allowmultiple",
+  "builds": {
+    "moodle-local_searchbytags-allowmultiple": {
+      "jsfiles": [
+        "allowmultiple.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Moodle question tags - Howto and Best Practices</title>
+</head>
+
+<body>
+    <header>
+        <div class="byline">
+            <address class="author"><a rel="author" href="mailto:Ray.Morris@teex.tamu.edu">Ray.Morris@teex.tamu.edu</a></address> 
+            <time datetime="2014-02-02">02/02/14</time>
+        </div>
+    <h1>Moodle question tags - Howto and Best Practices</h1>
+    <ul>
+        <li><a href="#whatare">What tags are</a></li>
+        <li><a href="#howused">How tags can be used with quiz questions</a></li>
+        <li><a href="#bestpractices">Tagging best practices</a></li>
+        <li><a href="#alternatives">Alternatives to tags - Categories and Outcomes (for structured standards)</a></li>
+    </ul>
+    </header>
+
+    <h2 id="whatare">What tags are</h2>
+    <p>
+        Within the Moodle LMS, various types of objects can be marked with <em>tags</em>. 
+        Tags are short keyword labels which tell us something about the object. You may have seen 
+        them used on web sites like Flickr or del.icio.us, or you may be familiar with the similar 
+        concept of <em>#hashtags</em> from Twitter, Facebook or Instagram. On Flickr, a popular tag is 
+        <code>California</code>, indicating a photo of something related to the state of California.
+        Within Moodle, tags can be applied to quiz questions, users, courses, and other items in the LMS.
+        This document discusses using tags with quiz questions.
+    </p>
+
+    <h2 id="howused">How tags can be used with quiz questions</h2>
+    <p>
+        Tags can be useful to help label and find questions in a large question bank. For example, if you
+        had a question bank with questions about the the Texas A&amp;M System, some of those questions may
+        specifically be about TEEX. Some questions may be about the history of the system, other questions
+        might be about TEEX history. You could tag those questions <code>TEEX</code> and <code>History</code>
+        to make them easier to find later.  Later, when building a quiz based on that question bank,
+        you can easily find all of the questions about TAMUS history by searching the
+        <code>History</code> tag.  The below screenshots demonstrate how that is done.
+    </p>
+
+    <h3>Adding tags when creating or editing a question:</h3>
+    <img src="addingtags.png" alt="screenshot of adding tags in the question bank" style="border: thin black solid;">
+    <p>
+    In the screenshot, I have added the tags <code>TEEX</code> and <code>History</code>  to this question, because it is a 
+    question about TEEX history. The screenshot shows there are two ways to add tags. The "Official tags" list has some 
+    pre-defined tags which other people have already used. It is good to select from pre-defined tags when possible.
+    If no predefined tags matches, you can instead type in your own tags in the text box.
+    </p>
+    
+    <h3>Searching questions using tags:</h3>
+    <p>
+    Suppose we are building a quiz for paramedics. In this quiz, we want to include some questions about various types of drugs.
+    We can do this by clicking on the <code>Drugs</code> tag within the question bank as shown:
+    </p>
+
+    <img src="searchingtags.png" alt="screenshot of searching by tag" style="border: thin black solid;">
+    <p>
+    To select multiple tags, hold down the <code>Ctrl</code> key while clicking.
+    Also visible in the screenshot above is the box to find questions that do NOT have certain tags. 
+    As an example, that could be used to find questions about drugs that are not about aspirin.
+    </p>
+
+    <h2 id="bestpractices">Tagging best pratices</h2>
+    <p>
+       It is best practice to choose tags that are a) general and b) about the question itself.
+       Keep in mind that in the future someone may want to use your tags to build a quiz for an entirely different course &mdash; 
+       and that person may be you. For this reason, <code>Medications</code> is a better tag than
+       <code>Chapter 15 - Medications</code>. Two years from now, you may be building a different course and have need for
+       questions about medications, completely unrelated to whatever book "chapter 15" refers to.  The key here is that
+       <em>the question itself</em> is about <code>Medications</code>, without reference to any particular course or anything else.
+       The tag on the question tells us something about the question.
+       Of course, this is only a general guideline. You may have a specific need to use tags in a different way. However, when 
+       the tag is not about the question itself, consider using Categories or Outcomes instead. Categories and Outcomes are 
+       discussed below.
+    </p>
+
+    <p>
+        It is recommended that tags be short, most often a single word. <code>Actors</code> rather than 
+        <code>Comedic actors of the 1980s</code>. This helps when using the tags later for searching. When looking for 
+        actors, you are more likely to just enter the word "actors" rather than come up with the longer phrase.
+        Just as important, it's actually more flexible to use two or three tags, <code>Actors</code>, 
+        <code>1980s</code> &amp; <code>Comedy</code>.  In this way, if you later need to find questions about 
+        actors, any actors, you can click the <code>Actors</code> tag.  If you want only 1980s actors, you 
+        can click both <code>Actors</code> and <code>1980s</code>. Two short tags give you more flexibility than one long tag.
+    </p>
+
+    <p>
+        Note in the above examples that tags are always plural, if the plural makes sense.
+        We use <code>Actors</code>, not <code>Actor</code>. This avoids having some items marked 
+        in the singular and some in the plural, creating unnecessary extra tags. Use the singular only 
+        when plural doesn't make any sense. Plural <code>Barak Obamas</code> doesn't make sense, there is only one 
+        Barak Obama, so we'd use the tag <code>Barak Obama</code>.
+    </p>
+
+    <h2 id="alternatives">Alternatives to tags - Question Categories and Outcomes</h2>
+    <p>
+       <strong>Categories</strong> are sometimes a better tool to use than tags. 
+       Categories are used to organize questions into useful groups. Categories can have sub-categories.
+       Categories are best when there is a natural hierarchy, meaning each question is in only one group. For example, 
+       categories could be used in a biology question bank to organize questions about Animals -&gt; Mammals -&gt; Primates versus 
+       Plants -&gt; Seed Plants -&gt; Conifers.  The important thing to note here is that no single item can be both a primate 
+       AND a conifer. Categories are good for organizing into exclusive categories of this nature. Categories may be most useful
+       when you want to organize based on something that is not an inherent property of the question itself, but rather 
+       represent <em>groupings</em> of questions.  As discussed, <em>tags</em> are used to mark properties of a question. 
+    </p>
+
+    <p>
+        <strong>Outcomes</strong> are designed to track student competencies in a required curriculum or set of standards.
+        As an example, outcomes can be a better choice than tags when a curriculum standard specifies that students must 
+        demonstrate competency in each of a list of skills. An elementary math curriculum might specify that the 
+        quiz must include questions covering addition, substraction, multiplication, and division. Outcomes serve this 
+        need well. For example, using outcomes you can see the student's average grade for addition questions, average 
+        grade for subtraction, etc. Like categories, outcomes are hierarchical, so multiplication and division can be 
+        grouped together under "math".  Unlike categories, outcomes are <em>not</em> exclusive, so one question could 
+        be marked for both the <code>understands regulations</code> outcome <em>and</em> the 
+        <code>understands safety rules</code> outcome.
+    </p>
+
+    <p>
+        <strong>Codified standards</strong> are another area where outcomes work well. If, for example, you are developing 
+        a course on fire codes, outcomes are an ideal way to track that the course teaches each section of the fire code, 
+        and test that students have learned each section of the code. Outcomes should be considered when the student needs 
+        to learn each element of a structured, well-defined standard.
+    </p>
+
+    <p>
+        Outcomes can also be associated with learning activities within the course.
+        TEEX support for the full outcomes system is planned for the second half of 2014. As of early 2014, a more limited 
+        version of outcomes is available. For detailed information about the upcoming outcomes system, see the 
+        <a href="http://docs.moodle.org/dev/Outcomes_Logical_Overview">logical overview</a> and 
+        <a href="http://docs.moodle.org/dev/Outcomes_Specification">specification documents</a>.
+    </p>
+
+</body>
+</html>
