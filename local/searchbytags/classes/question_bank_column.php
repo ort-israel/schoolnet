@@ -47,16 +47,16 @@ class local_searchbytags_question_bank_column extends core_question\bank\column_
 
     public function get_required_fields() {
         // For mssql.
-        return array("(SELECT tag.name + ', ' FROM {tag} tag 
+        /*return array("(SELECT tag.name + ', ' FROM {tag} tag
                                LEFT JOIN {tag_instance} tagi ON tag.id=tagi.tagid 
-                                WHERE tagi.itemid=q.id FOR XML PATH('')) AS tags");
+                                WHERE tagi.itemid=q.id FOR XML PATH('')) AS tags");*/
 
         // For MySQL.
-        /*
+
         return array("
             (SELECT GROUP_CONCAT(name) AS tags FROM mdl_tag_instance LEFT JOIN mdl_tag ON mdl_tag.id=mdl_tag_instance.tagid WHERE itemid=q.id) as tags
         ");
-        */
+
     }
 }
 
