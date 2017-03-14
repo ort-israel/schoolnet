@@ -26,7 +26,7 @@ class qtype_splitset extends question_type {
     /**
      * @return boolean to indicate success of failure.
      */
-    function get_question_options(&$question) {
+    function get_question_options($question) {
     	global $DB;
         // TODO code to retrieve the extra data you stored in the database into
         
