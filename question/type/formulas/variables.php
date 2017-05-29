@@ -1352,8 +1352,8 @@ class qtype_formulas_variables {
                     break;
 
                 // Functions that must have two arguments
-                case 'atan2': case 'fmod': case 'pow': case 'ncr': case 'npr':
-                    if (strlen($regs[5])!=0 || strlen($regs[4])==0) {
+                case 'atan2': case 'fmod': case 'pow': case 'ncr': case 'npr':case 'lcm': case 'gcd':
+            if (strlen($regs[5])!=0 || strlen($regs[4])==0) {
                         return get_string('functiontakestwoargs', 'qtype_formulas', $regs[2]);
                     }
                     break;
