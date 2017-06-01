@@ -66,7 +66,7 @@ function gcd($a,$b) {
     if($a < 0)         $a=0-$a;
     if($b < 0 )        $b=0-$b;
     if($a == 0 || $b == 0)    return 1;
-    if($a == $b)              return a;
+    if($a == $b)              return $a;
 
     do{
         $rest = (int) $a % $b;
