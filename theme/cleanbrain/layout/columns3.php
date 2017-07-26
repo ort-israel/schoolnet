@@ -50,7 +50,7 @@ echo $OUTPUT->doctype() ?>
 <body <?php echo $OUTPUT->body_attributes(); ?>>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
-<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
+<header role="banner" class="miri navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <section class="logos row-content buffer-top buffer-left clear-after">
         <a class="logo-ort" href="http://ort.org.il"></a>
         <a class="logo-site" href="http://brain.ort.org.il"></a>
