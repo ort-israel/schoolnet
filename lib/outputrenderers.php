@@ -3991,10 +3991,12 @@ EOD;
      * @return string
      */
     public function body_attributes($additionalclasses = array()) {
+        global $COURSE;
+        $cuorseid=$COURSE->id;
         if (!is_array($additionalclasses)) {
             $additionalclasses = explode(' ', $additionalclasses);
         }
-        return ' id="'. $this->body_id().'" class="'.$this->body_css_classes($additionalclasses).'"';
+        return ' id="'. $this->body_id().'" class="'.$this->body_css_classes($additionalclasses).'-courseid-'.$cuorseid.'"';
     }
 
     /**

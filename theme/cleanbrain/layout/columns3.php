@@ -29,7 +29,6 @@
  */
 
 // Get the HTML for the settings bits.
-
 $html = theme_cleanbrain_get_html_for_settings($OUTPUT, $PAGE);
 
 if (right_to_left()) {
@@ -47,9 +46,10 @@ echo $OUTPUT->doctype() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body <?php echo $OUTPUT->body_attributes(); ?>>
-<?php echo $OUTPUT->standard_top_of_body_html() ?>
-
+<body <?php //miriklofer---I add the id cuorse to the class body in "lib/outputrenderers"
+echo $OUTPUT->body_attributes();?>>
+<?php echo $OUTPUT->standard_top_of_body_html();
+?>
 <header role="banner" class="miri navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <section class="logos row-content buffer-top buffer-left clear-after">
         <a class="logo-ort" href="http://ort.org.il"></a>

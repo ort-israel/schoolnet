@@ -42,7 +42,7 @@ a{
 @font-face {
     font-family: 'fbmodulary_bold';
     src: url([[font:theme|fbmodulary-bold-webfont.eot]]);
-    src: url([[font:theme|fbmodulary-bold-webfont.eot]]) format('embedded-opentype'), 
+    src: url([[font:theme|fbmodulary-bold-webfont.eot]]) format('embedded-opentype'),
 		 url([[font:theme|fbmodulary-bold-webfont.woff]]) format('woff'),
 		 url([[font:theme|fbmodulary-bold-webfont.ttf]]) format('truetype');
     font-weight: normal;
@@ -83,6 +83,14 @@ h2,h3{
     padding: 0 calc(50% - 35em) 1rem;
     height:192px;
 }
+.layout-option-langmenu-courseid-144 .navbar-fixed-top{
+    background:url([[pix:theme|b-header]]) repeat scroll center bottom;
+    color: #fff;
+    border-bottom: 10px solid #0093b3;
+    padding: 0 calc(50% - 35em) 1rem;
+    height:192px;
+}
+
 .navbar-fixed-top, .navbar-fixed-bottom{
     position: inherit;
 }
@@ -94,6 +102,14 @@ h2,h3{
     width: 220px;
     height: 138px;
     background:url([[pix:theme|sprite]]) no-repeat;
+    display: inline-block;
+    float: right;
+    margin: 26px 9px 0 0;
+}
+.layout-option-langmenu-courseid-144 .logo-site{
+    width: 242px;
+    height: 153px;
+    background:url([[pix:theme|sprite-b]]) no-repeat;
     display: inline-block;
     float: right;
     margin: 26px 9px 0 0;
@@ -201,8 +217,26 @@ body{
     top: 50px;
     width: 200px;
 }
+.layout-option-langmenu-courseid-144 .course-content ul.gridicons li #gridsection-1:before{
+    background:url([[pix:theme|b-SpriteBrain]]) no-repeat scroll 39% 0 rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 9px;
+    top: 50px;
+    width: 200px;
+}
 .course-content ul.gridicons li #gridsection-2:before{
     background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 25% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: -3px;
+    top: 50px;
+    width: 200px;
+}
+.layout-option-langmenu-courseid-144 .course-content ul.gridicons li #gridsection-2:before{
+    background:url([[pix:theme|b-SpriteBrain]]) no-repeat scroll 39% 25% rgba(0, 0, 0, 0);
     content: "";
     height: 172px;
     position: absolute;
@@ -219,6 +253,15 @@ body{
     top: 50px;
     width: 200px;
 }
+.layout-option-langmenu-courseid-144 .course-content ul.gridicons li #gridsection-3:before{
+    background:url([[pix:theme|b-SpriteBrain]]) no-repeat scroll 39% 50% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 1px;
+    top: 50px;
+    width: 200px;
+}
 .course-content ul.gridicons li #gridsection-4:before{
     background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 75% rgba(0, 0, 0, 0);
     content: "";
@@ -228,9 +271,26 @@ body{
     top: -66px;
     width: 200px;
 }
-
+.layout-option-langmenu-courseid-144 .course-content ul.gridicons li #gridsection-4:before{
+    background:url([[pix:theme|b-SpriteBrain]]) no-repeat scroll 39% 75% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 4px;
+    top: -66px;
+    width: 200px;
+}
 .course-content ul.gridicons li #gridsection-5:before{
     background:url([[pix:theme|SpriteBrain]]) no-repeat scroll 39% 100% rgba(0, 0, 0, 0);
+    content: "";
+    height: 172px;
+    position: absolute;
+    right: 9px;
+    top: -64px;
+    width: 200px;
+}
+.layout-option-langmenu-courseid-144 .course-content ul.gridicons li #gridsection-5:before{
+    background:url([[pix:theme|b-SpriteBrain]]) no-repeat scroll 39% 100% rgba(0, 0, 0, 0);
     content: "";
     height: 172px;
     position: absolute;
@@ -342,6 +402,14 @@ padding-right:0;
     background:url([[pix:theme|footer]]) repeat center;
     background-repeat:repeat-x;
     border-top:10px solid #ee5a13;
+    padding:0.4rem calc(50% - 35em) 1% ;
+    text-align: center;
+    height: 38px;
+}
+.layout-option-langmenu-courseid-144 #page-footer{
+    background:url([[pix:theme|footer]]) repeat center;
+    background-repeat:repeat-x;
+    border-top:10px solid #0093b3;
     padding:0.4rem calc(50% - 35em) 1% ;
     text-align: center;
     height: 38px;
@@ -609,7 +677,7 @@ width:auto;
 #page-mod-quiz-attempt .que .content .answer{
    font-size:14px !importqant;
    font-family: 'Alef' !importqant;
-   
+
 }
 /*------STORY-LINE--------*/
 
