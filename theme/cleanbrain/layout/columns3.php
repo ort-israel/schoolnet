@@ -50,10 +50,15 @@ echo $OUTPUT->doctype() ?>
 echo $OUTPUT->body_attributes();?>>
 <?php echo $OUTPUT->standard_top_of_body_html();
 ?>
-<header role="banner" class="miri navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
+<?php $cuorseid=$COURSE->id;?>
+<header role="banner" class="navbar navbar-fixed-top<?php echo $html->navbarclass ?>">
     <section class="logos row-content buffer-top buffer-left clear-after">
         <a class="logo-ort" href="http://ort.org.il"></a>
-        <a class="logo-site" href="http://brain.ort.org.il"></a>
+        <?php if($cuorseid==144){
+         echo '<a class="logo-site" href="http://bigbrain.ort.org.il/"></a>';}
+        else{
+            echo '<a class="logo-site" href="http://brain.ort.org.il"></a>';
+        } ?>
     </section>
     <nav role="navigation" class="navbar-inner">
         <div class="container-fluid">
