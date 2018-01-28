@@ -33,34 +33,34 @@ defined('MOODLE_INTERNAL') || die;
 if ($ADMIN->fulltree) {
 
     // Invert Navbar to dark background.
-    $name = 'theme_clean_heart/invert';
-    $title = get_string('invert', 'theme_clean_heart');
-    $description = get_string('invertdesc', 'theme_clean_heart');
+    $name = 'theme_clean_osos/invert';
+    $title = get_string('invert', 'theme_clean_osos');
+    $description = get_string('invertdesc', 'theme_clean_osos');
     $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Logo file setting.
-    $name = 'theme_clean_heart/logo';
-    $title = get_string('logo','theme_clean_heart');
-    $description = get_string('logodesc', 'theme_clean_heart');
+    $name = 'theme_clean_osos/logo';
+    $title = get_string('logo','theme_clean_osos');
+    $description = get_string('logodesc', 'theme_clean_osos');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Custom CSS file.
-    $name = 'theme_clean_heart/customcss';
-    $title = get_string('customcss', 'theme_clean_heart');
-    $description = get_string('customcssdesc', 'theme_clean_heart');
+    $name = 'theme_clean_osos/customcss';
+    $title = get_string('customcss', 'theme_clean_osos');
+    $description = get_string('customcssdesc', 'theme_clean_osos');
     $default = '';
     $setting = new admin_setting_configtextarea($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
     // Footnote setting.
-    $name = 'theme_clean_heart/footnote';
-    $title = get_string('footnote', 'theme_clean_heart');
-    $description = get_string('footnotedesc', 'theme_clean_heart');
+    $name = 'theme_clean_osos/footnote';
+    $title = get_string('footnote', 'theme_clean_osos');
+    $description = get_string('footnotedesc', 'theme_clean_osos');
     $default = '';
     $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
