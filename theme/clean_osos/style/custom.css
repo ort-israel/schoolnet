@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'Alef';
+    src: url([[font:theme|Alef-Regular.eot]]);
+    src: url([[font:theme|Alef-Regular.eot]]) format('embedded-opentype'),
+		 url([[font:theme|Alef-Regular.woff]]) format('woff'),
+		 url([[font:theme|Alef-Regular.ttf]]) format('truetype'),
+		 url([[font:theme|Alef-Regular.svg]]) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oronBlabk';
+    src: url([[font:theme|oronblck.eot]]);
+    src: url([[font:theme|oronblck.eot]]) format('embedded-opentype'),
+		 url([[font:theme|oronblck.woff]]) format('woff'),
+		 url([[font:theme|oronblck.ttf]]) format('truetype'),
+		 url([[font:theme|oronblck.svg]]) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*clear*/
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+html,
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+body{
+	font-family: 'Alef','arial';
+    padding-top: 0;
+}
+#page{
+     /*margin: 0;
+     padding: 0;*/
+    color: #595959;
+	font-size: 18px;
+ }
+#page a{
+    color: #595959;
+    text-decoration: underline;
+}
+#page a:hover{
+    color: #e03e27;
+}
+body.has_dock #page{
+    padding: 0 !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'oronBlabk','arial';
+    font-weight: normal;
+}
+
+/*center content*/
+.page-header-wrapper,
+#page-content{
+    padding: 0 calc(50% - 542px);
+}
+@media (min-width: 1200px){
+	#region-main-box{
+		width: 100%;
+	}
+   .row-fluid{
+        width: inherit;
+    }
+	#region-main{
+        float: right;
+    }
+}
+.container-fluid{
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+.single-section h3.sectionname{
+	text-align: right;
+}
+.course-content ul.topics li.section .right{
+    width: 0;
+}
+.course-content ul.topics li.section .content h3{
+    margin-bottom: 0;
+}
+
+/*header*/
+header.top-header{
+    text-align: center;
+    position: relative;
+    margin-bottom: 0;
+}
+.logos a{
+    text-indent: -9999rem;
+    overflow: hidden;
+    display: inline-block;
+    margin: 14px 0;
+}
+.logos a:hover,
+.logos a:focus,
+.site-title a:hover,
+.site-title a:focus{
+    outline-color: #F1FF00;
+}
+a.mada-logo{
+    background-image: url([[pix:theme|sprite_mobile]]);
+    background-position: -7px -301px;
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 57px;
+    margin-right: 10px;
+}
+a.ort-logo{
+    background-image: url([[pix:theme|sprite_mobile]]);
+    background-position: -8px -201px;
+    background-repeat: no-repeat;
+    width: 153px;
+    height: 56px;
+}
+.titles{
+    color: #ffffff;
+    padding:0;
+}
+.site-title{
+    background-image: url([[pix:theme|sprite_mobile]]);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 153px;
+    margin-bottom: 0;
+}
+.site-title a{
+    text-indent: -9999rem;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.site-sub-title{
+    font-family: oronBlabk, arial;
+    font-size: 19px;
+}
+.site-sub-title{
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+/* #page header */
+div.page-header-wrapper{
+    background-color: #dcdcdc;
+}
+header .page-context-header{
+    display: none;
+}
+header#page-header{
+    float: right !important;
+    width: calc(100% - 200px); /* full width minus .usermenu div */
+}
+nav.breadcrumb-nav{
+    margin: 5px 0;
+}
+.breadcrumb{
+    background: none;
+}
+.breadcrumb>li{
+    text-shadow: none;
+    font-size: 18px;
+	line-height: 26px;
+}
+.breadcrumb .arrow.sep{
+    visibility: hidden;
+}
+.breadcrumb .divider{
+    position: relative;
+	padding: 0 7px;
+}
+.breadcrumb .divider:before{
+    position: absolute;
+    content: ">";
+    color: #595959;
+    left: 0.5em;
+    top:0.1em;
+}
+.dir-rtl .breadcrumb-button{
+    margin-top: 9px;
+    float: right;
+}
+.breadcrumb-button input[type="submit"]{
+    margin: 0;
+}
+.usermenu{
+    margin-top: 3px;
+}
+
+/*side blocks*/
+#page .block a.menu-action:hover,
+#page .usermenu .menu a:hover{
+   color: #ffffff;
+}
+#block-region-side-pre{
+    float: left;
+}
+.block{
+    margin-bottom: 0;
+    background-color: #e7e8e9;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.block .header h2{
+    padding-bottom: 10px;
+    font-size: 28px;
+	font-weight: normal;
+    border-bottom: #0b8db1 2px solid;
+    color: #595959;
+}
+
+.block .list li,
+.block_html .content li{
+    margin-top: 7px;
+}
+/*creates space between blocks*/
+span.skip-block-to{
+    height: 0;
+}
+/*color bullets when hover*/
+.block_html .content ul{
+    //list-style: none;
+}
+.block_html .content li{
+    position: relative;
+}
+.block_html .content li:before{
+    content: " ";
+}
+.block_html .content li:hover{
+    color: #e03e27;
+}
+
+/*footer*/
+#page-footer{
+    margin-top: 0;
+    background-color: #dcdcdc;
+    padding: 40px calc(50% - 542px);
+    border-top: 15px solid #88c2d0;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 18px;
+}
+#page-footer a{
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+#page-footer a:hover,
+#page-footer a:focus{
+    color: #595959;
+    font-weight: bold;
+    outline: none;
+}
+
+/*-----------------------------*/
+/**------ Media Queries ------**/
+/*-----------------------------*/
+@media only screen and (min-width: 766px){
+    /* header */
+    header.top-header{
+        background-image: url([[pix:theme|header]]);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 26px 0 0 40px;
+        height: 280px;
+    }
+    .logos{
+        left: calc(50% - 335px);
+        position: relative;
+    }
+    a.mada-logo{
+        background-image: url([[pix:theme|sprite_web]]);
+        background-position: -144px -476px;
+        width: 275px;
+        height: 149px;
+        position: absolute;
+        margin-top: 110px;
+    }
+    a.ort-logo{
+        background-image: url([[pix:theme|sprite_web]]);
+        background-position: -160px -306px;
+        width: 255px;
+        height: 124px;
+        position: absolute;
+    }
+    .titles{
+        background: none;
+    }
+    .site-title{
+        float: right;
+        width: 427px;
+        height: 244px;
+        background-image: url([[pix:theme|sprite_web]]);
+        background-position: 0 24px;
+        margin:0 16px 0 0;
+        padding-top: 0;
+    }
+    .site-sub-title{
+        float: right;
+        margin: 155px 0 0;
+        padding-right: 0;
+
+    }
+    .site-sub-title{
+        font-size: 28px;
+    }
+    .dir-rtl .breadcrumb-button{
+        float: left;
+    }
+}
+@media only screen and (min-width: 1084px){
+    header.top-header{
+        padding: 0 calc(50% - 542px);
+    }
+    .logos{
+        left: calc(50% - 450px);
+    }
+
+}
