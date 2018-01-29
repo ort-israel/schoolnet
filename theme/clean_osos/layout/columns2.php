@@ -17,13 +17,13 @@
 /**
  * The two column layout.
  *
- * @package   theme_clean_heart
+ * @package   theme_clean_osos
  * @copyright 2013 Moodle, moodle.org
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 // Get the HTML for the settings bits.
-$html = theme_clean_heart_get_html_for_settings($OUTPUT, $PAGE);
+$html = theme_clean_osos_get_html_for_settings($OUTPUT, $PAGE);
 
 // Set default (LTR) layout mark-up for a two column page (side-pre-only).
 $regionmain = 'span9 pull-right';
