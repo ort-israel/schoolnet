@@ -260,7 +260,11 @@ class qtype_calculatedmulti extends qtype_calculated {
                 }
                 $anstext = $anstext.$str;
             }
+<<<<<<< HEAD
             $anstext .= $anstextremaining;
+=======
+            $anstext = str_replace(array_keys($replaces), array_values($replaces), $anssubstituted);
+>>>>>>> 6ed62ae... MDL-62275 qtype_calculatedmulti: Fix typo
             $comment->stranswers[$key] = $anssubstituted.'<br/>'.$anstext;
         }
         return fullclone($comment);
